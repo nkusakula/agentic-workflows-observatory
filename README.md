@@ -50,7 +50,8 @@ This demo simulates a small SaaS team that has adopted AI agents to automate rep
 ├── docs/
 │   ├── SETUP.md              # Step-by-step install + first run
 │   ├── BLOG-POST.md          # The accompanying narrative blog post
-│   └── ARCHITECTURE.md       # How observatory + subject agents interact
+│   ├── ARCHITECTURE.md       # How observatory + subject agents interact
+│   └── API.md                # Complete API reference documentation
 ├── LICENSE
 └── README.md
 ```
@@ -87,6 +88,16 @@ gh aw run metrics-collector
 Full walkthrough: [`docs/SETUP.md`](docs/SETUP.md)
 
 ---
+
+## 🔌 API Documentation
+
+For detailed information about the TaskFlow API endpoints, request/response schemas, and error handling, see [`docs/API.md`](docs/API.md). The API documentation includes:
+
+- Complete endpoint reference
+- Request/response schemas
+- Error handling format
+- Code examples
+- Data type definitions
 
 ## 🧩 Meet the Agents
 
