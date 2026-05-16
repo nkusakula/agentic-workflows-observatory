@@ -37,7 +37,7 @@ const server = http.createServer(async (req, res) => {
   if (req.method === "POST" && url.pathname === "/tasks") {
     const body = await readBody(req);
     if (!body.title) return send(res, 400, { error: "title required" });
-    const task = { id: nextId++, title: body.title, done: false };
+    const task = { id: nextId++, title: body.title, done: false, dueDate: body.dueDate || null };
     tasks.set(task.id, task);
     return send(res, 201, task);
   }
@@ -49,6 +49,7 @@ const server = http.createServer(async (req, res) => {
     const body = await readBody(req);
     if (typeof body.done === "boolean") task.done = body.done;
     if (typeof body.title === "string") task.title = body.title;
+    if (typeof body.dueDate !== "undefined") task.dueDate = body.dueDate;
     return send(res, 200, task);
   }
 
@@ -61,3 +62,4 @@ if (require.main === module) {
 }
 
 module.exports = { server, tasks };
+
