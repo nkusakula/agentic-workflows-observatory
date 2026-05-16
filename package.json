@@ -1,0 +1,11 @@
+{
+  "name": "taskflow-api",
+  "version": "0.1.0",
+  "description": "Minimal sample API used as the subject for agentic workflow demos.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test src/*.test.js"
+  },
+  "license": "MIT"
+}
