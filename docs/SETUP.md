@@ -18,7 +18,7 @@ gh aw --version
 ## 2. Clone or Fork This Demo
 
 ```bash
-gh repo clone <your-user>/agentic-workflows-observatory-demo
+gh repo clone nkusakula/agentic-workflows-observatory
 cd agentic-workflows-observatory-demo
 ```
 

@@ -107,7 +107,7 @@ A complete reference implementation of everything described in this post is avai
 gh extension install github/gh-aw
 
 # Clone the demo
-gh repo clone <your-user>/agentic-workflows-observatory-demo
+gh repo clone nkusakula/agentic-workflows-observatory
 cd agentic-workflows-observatory-demo
 
 # Compile and push

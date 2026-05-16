@@ -140,5 +140,6 @@ If you'd like the narrative version — the "why this matters" arc — read [`do
 
 MIT — see [`LICENSE`](LICENSE).
 
-> Built as a demo for the Microsoft Developer Blog post on agentic workflows.
-> Inspired by patterns from GitHub Next and Microsoft Research.
+> Built as a demo for the Microsoft Developer Blog post on agentic workflows.  
+> Inspired by patterns from GitHub Next and Microsoft Research.  
+> GitHub: [nkusakula/agentic-workflows-observatory](https://github.com/nkusakula/agentic-workflows-observatory)
