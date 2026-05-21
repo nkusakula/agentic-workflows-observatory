@@ -59,6 +59,14 @@ const server = http.createServer(async (req, res) => {
     return send(res, 200, task);
   }
 
+  if (req.method === "DELETE" && url.pathname.startsWith("/tasks/")) {
+    const id = Number(url.pathname.split("/")[2]);
+    const task = tasks.get(id);
+    if (!task) return send(res, 404, { error: "not found" });
+    tasks.delete(id);
+    return send(res, 204, null);
+  }
+
   send(res, 404, { error: "not found" });
 });
 
