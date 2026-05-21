@@ -50,7 +50,8 @@ This demo simulates a small SaaS team that has adopted AI agents to automate rep
 ├── docs/
 │   ├── SETUP.md              # Step-by-step install + first run
 │   ├── BLOG-POST.md          # The accompanying narrative blog post
-│   └── ARCHITECTURE.md       # How observatory + subject agents interact
+│   ├── ARCHITECTURE.md       # How observatory + subject agents interact
+│   └── COPILOT-DEMO.md       # Copilot CLI & Chat demo walkthrough
 ├── LICENSE
 └── README.md
 ```
@@ -119,6 +120,20 @@ Every workflow in this repo follows the GitHub Agentic Workflows security model:
 5. **AI-powered threat detection** — scans every proposed output
 
 See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) for the layered diagram.
+
+---
+
+## 🤖 Copilot CLI & Copilot Chat
+
+This demo also showcases how **Copilot CLI** and **Copilot Chat** complement the autonomous agentic workflows with interactive, human-in-the-loop AI assistance:
+
+| Surface | Mode | Example |
+|---------|------|---------|
+| **Copilot CLI** (`gh copilot suggest/explain`) | Terminal | "Suggest a command to list failed workflow runs from this week" |
+| **Copilot Chat** (`@workspace` in VS Code) | IDE | "Explain how the observatory agents detect token overspend" |
+| **Agentic Workflows** (`.md` in `.github/workflows/`) | Autonomous | Runs on schedule/events, posts findings to Discussions & Issues |
+
+Full walkthrough with live demo script: [`docs/COPILOT-DEMO.md`](docs/COPILOT-DEMO.md)
 
 ---
 

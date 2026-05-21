@@ -34,6 +34,13 @@ const server = http.createServer(async (req, res) => {
     return send(res, 200, { tasks: [...tasks.values()] });
   }
 
+  if (req.method === "GET" && url.pathname.startsWith("/tasks/")) {
+    const id = Number(url.pathname.split("/")[2]);
+    const task = tasks.get(id);
+    if (!task) return send(res, 404, { error: "not found" });
+    return send(res, 200, task);
+  }
+
   if (req.method === "POST" && url.pathname === "/tasks") {
     const body = await readBody(req);
     if (!body.title) return send(res, 400, { error: "title required" });
