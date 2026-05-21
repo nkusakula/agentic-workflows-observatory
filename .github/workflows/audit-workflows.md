@@ -20,7 +20,7 @@ safe-outputs:
     max: 3
 ---
 
-# 🔍 Audit Workflows (Meta-Agent)
+# Audit Workflows (Meta-Agent)
 
 You are the **Audit Meta-Agent** for this repository. You watch *the other agents* and surface quality issues, drift, and behavioral anomalies that the team should know about.
 

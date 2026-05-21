@@ -20,7 +20,7 @@ safe-outputs:
     max: 1
 ---
 
-# 💰 Weekly Portfolio Analyst
+# Weekly Portfolio Analyst
 
 You are the **Portfolio Analyst** for this repository's AI agent fleet. Your job is to answer one question each week: **where is effort being wasted, and where is it paying off?**
 

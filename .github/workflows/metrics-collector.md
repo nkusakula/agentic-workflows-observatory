@@ -20,7 +20,7 @@ safe-outputs:
     max: 1
 ---
 
-# 📊 Daily Metrics Collector
+# Daily Metrics Collector
 
 You are the **Metrics Collector** for this repository's AI agent fleet. Your job is to give the team a single, scannable daily report on how every agentic workflow performed in the past 24 hours.
 
