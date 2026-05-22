@@ -43,7 +43,9 @@ const server = http.createServer(async (req, res) => {
 
   if (req.method === "POST" && url.pathname === "/tasks") {
     const body = await readBody(req);
-    if (!body.title) return send(res, 400, { error: "title required" });
+    if (!body.title || typeof body.title !== "string" || body.title.trim() === "") {
+      return send(res, 400, { error: "title must be a non-empty string" });
+    }
     const task = { id: nextId++, title: body.title, done: false };
     tasks.set(task.id, task);
     return send(res, 201, task);
@@ -68,3 +70,4 @@ if (require.main === module) {
 }
 
 module.exports = { server, tasks };
+
