@@ -3,9 +3,18 @@ const http = require("http");
 const tasks = new Map();
 let nextId = 1;
 
-function send(res, status, body) {
-  res.writeHead(status, { "Content-Type": "application/json" });
+function send(res, status, body, headers = {}) {
+  res.writeHead(status, { "Content-Type": "application/json", ...headers });
   res.end(JSON.stringify(body));
+}
+
+function methodNotAllowed(res, allowedMethods) {
+  return send(
+    res,
+    405,
+    { error: "method not allowed" },
+    { Allow: allowedMethods.join(", ") },
+  );
 }
 
 function readBody(req) {
@@ -57,6 +66,14 @@ const server = http.createServer(async (req, res) => {
     if (typeof body.done === "boolean") task.done = body.done;
     if (typeof body.title === "string") task.title = body.title;
     return send(res, 200, task);
+  }
+
+  if (url.pathname === "/tasks") {
+    return methodNotAllowed(res, ["GET", "POST"]);
+  }
+
+  if (url.pathname.startsWith("/tasks/")) {
+    return methodNotAllowed(res, ["GET", "PATCH"]);
   }
 
   send(res, 404, { error: "not found" });
